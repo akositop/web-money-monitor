@@ -1,34 +1,62 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-  </div>
+    <div class="hello">
+        <h1>{{ msg }}</h1>
+        <section class="section">
+              <div class="container">
+                  <div class="columns">
+                      <div class="column">
+                          <h2>column 1</h2>
+                          <div>
+                              <icon name="beer"></icon>
+                          </div>
+                      </div>
+                      <div class="column">
+                          <h2>column 2</h2>
+                          <div>
+                              <icon name="refresh" scale="2" spin></icon>
+                              <icon name="comment" flip="horizontal"></icon>
+                              <icon name="code-fork" label="Forked Repository"></icon>
+                          </div>
+                      </div>
+                      <div class="column">
+                          <h2>column 3</h2>
+                          <div>
+                              <icon label="No Photos" spin>
+                                  <icon name="camera"></icon>
+                                  <icon name="ban" scale="2" class="alert"></icon>
+                              </icon>
+                          </div>
+                      </div>
+                  </div>
+             </div>
+         </section>
+      </div>
 </template>
 
 <script>
+// AJAX library import
+import axios from 'axios/dist/axios'
+
 export default {
-  name: 'hello start project',
+  name: 'hello',
   data () {
     return {
       msg: 'Welcome to Your starting Vue.js App'
     }
+  },
+
+  mounted () {
+     axios({
+        method: 'GET',
+        url: 'index.html'
+     })
+     .then(function (data) {
+        console.log('fetch data: ', data)
+     })
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>

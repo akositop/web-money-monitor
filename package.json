@@ -2,7 +2,7 @@
   "name": "start-app",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "gilbert cuerbo <netzon.gilbert@gmail.com>",
+  "author": "gilbert cuerbo <gilbert.cuerbo@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
@@ -13,7 +13,10 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "bulma": "^0.7.1",
     "vue": "^2.5.2",
+    "vue-awesome": "^2.3.7",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
