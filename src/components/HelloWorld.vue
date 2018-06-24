@@ -7,7 +7,7 @@
                       <div class="column">
                           <h2>column 1</h2>
                           <div>
-                              <icon name="beer"></icon>
+                              <icon name="beer" scale="5"></icon>
                           </div>
                       </div>
                       <div class="column">
@@ -36,24 +36,26 @@
 <script>
 // AJAX library import
 import axios from 'axios/dist/axios'
+import moment from 'moment/moment'
 
 export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your starting Vue.js App'
-    }
-  },
+    name: 'hello',
+    data () {
+        return {
+          msg: 'Welcome to Your starting Vue.js App'
+        }
+    },
 
-  mounted () {
-     axios({
-        method: 'GET',
-        url: 'index.html'
-     })
-     .then(function (data) {
-        console.log('fetch data: ', data)
-     })
-  }
+    mounted () {
+       axios({
+          method: 'GET',
+          url: 'index.html'
+       })
+       .then(function (data) {
+          console.log('fetch data: ', data)
+          console.log(moment().format('MM DD, YYYY'))
+       })
+    }
 }
 </script>
 
