@@ -49,7 +49,8 @@ export default {
     mounted () {
        axios({
           method: 'GET',
-          url: 'index.html'
+          url: 'static/tempdocs/userDoc.json',
+          cache: false
        })
        .then(function (data) {
           console.log('fetch data: ', data)
