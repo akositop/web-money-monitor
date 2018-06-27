@@ -58,9 +58,11 @@ export default {
     mounted () {
       this.$request({
           method: 'GET',
-          url: 'http://localhost:3000',
+          // url: 'http://localhost:3000',
+          url: '',
           cache: false
-       }, true)
+       // }, true)
+      })
       .then(function (data) {
           console.log('fetch data: ', data)
           console.log(moment().format('MM DD, YYYY'))
