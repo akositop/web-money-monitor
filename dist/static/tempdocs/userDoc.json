@@ -1,0 +1,65 @@
+{
+	"id": "",
+	"label": "",
+	"description": "",
+	"base": [
+		{
+			"id": "",
+			"label": "default expenses",
+			"category": "default",
+			"type": "expenses",
+			"value": 0
+		},
+		{
+			"id": "",
+			"label": "default income",
+			"category": "default",
+			"type": "income",
+			"value": 0
+		}
+	],
+	"locals": [
+		{
+			"id": "",
+			"label": "",
+			"description": "",
+			"base": [
+				{
+					"id": "",
+					"label": "default expenses",
+					"category": "default",
+					"type": "expenses",
+					"value": 0
+				},
+				{
+					"id": "",
+					"label": "default income",
+					"category": "default",
+					"type": "income",
+					"value": 0
+				}
+			]
+		},
+		{
+			"id": "",
+			"label": "",
+			"description": "",
+			"base": [
+				{
+					"id": "",
+					"label": "default expenses",
+					"category": "default",
+					"type": "expenses",
+					"value": 0
+				},
+				{
+					"id": "",
+					"label": "default income",
+					"category": "default",
+					"type": "income",
+					"value": 0
+				}
+			]
+		}
+	]
+}
