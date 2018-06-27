@@ -35,8 +35,12 @@
 
 <script>
 // AJAX library import
-import axios from 'axios/dist/axios'
+// import axios from 'axios/dist/axios'
 import moment from 'moment/moment'
+import request from '../services/request/request'
+import Vue from 'vue'
+
+Vue.use(request)
 
 export default {
     name: 'hello',
@@ -46,16 +50,30 @@ export default {
         }
     },
 
+    created () {
+        localStorage.setItem('origin', 'gilbert nice one');
+    },
+
+
     mounted () {
-       axios({
+      this.$request({
           method: 'GET',
-          url: 'static/tempdocs/userDoc.json',
+          url: 'http://localhost:3000',
           cache: false
-       })
-       .then(function (data) {
+       }, true)
+      .then(function (data) {
           console.log('fetch data: ', data)
           console.log(moment().format('MM DD, YYYY'))
        })
+       // axios({
+       //    method: 'GET',
+       //    url: 'static/tempdocs/userDoc.json',
+       //    cache: false
+       // })
+       // .then(function (data) {
+       //    console.log('fetch data: ', data)
+       //    console.log(moment().format('MM DD, YYYY'))
+       // })
     }
 }
 </script>
