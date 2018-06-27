@@ -5,7 +5,7 @@ export default {
 		Vue.prototype.$request = (reqData, isCustom) => {
 			// get local storage data
 			let AUTH_ADDRESS = 'origin',
-				  API_IP = 'http://139.59.255.28:3000/'
+				API_IP = 'http://139.59.255.28:3000/'
 
 
 			// function to access local stored cridential
