@@ -16,22 +16,21 @@ export default {
 				return data? data: null
 			}
 
-			if (!isCustom) {
-				// set authentication data if auth not existed
-				if (!reqData.authentication) {
-					console.log('not a custom request!')
+			// set authentication data if auth not existed
+			if (!reqData.authentication) {
 					// set auhentication data
 					let authData = getLocalAuth(AUTH_ADDRESS)
 					reqData.authentication = authData
+			}
 
-					// set base api address data
-					console.log(API_IP + (reqData.url? reqData.url: ''))
-					reqData.url = API_IP + (reqData.url? reqData.url: '')
-				}
+			// set default base api address if the request is not custom
+			if (!isCustom) {
+				// set base api address data
+				reqData.url = API_IP + (reqData.url? reqData.url: '')
 			}
 
 			// request pre setted with request data
-			console.log('handled reqData: ', reqData)
+			// console.log('handled reqData: ', reqData)
 			return axios(reqData)
 		}
 	}
