@@ -1,7 +1,6 @@
 <template>
     <div class="hello">
         <!-- <h1>{{ msg }}</h1> -->
-        <global-header></global-header>
         <section class="section">
               <div class="container">
                   <div class="columns">
@@ -39,7 +38,6 @@
 // import axios from 'axios/dist/axios'
 import moment from 'moment/moment'
 import request from '../services/request/request'
-import globalHeader from './global-header'
 import Vue from 'vue'
 
 // console.log(GlobalHeader)
@@ -52,10 +50,6 @@ export default {
         return {
             msg: 'Welcome to Your starting Vue.js App'
         }
-    },
-
-    components: {
-        globalHeader
     },
 
     created () {

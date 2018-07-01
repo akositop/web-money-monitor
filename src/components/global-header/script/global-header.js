@@ -3,11 +3,9 @@ export default {
 
     data() {
         return {
-            test: 'shit'
+            test: 'shit',
+            name: 'money monitor',
+            show: false
         }
-    },
-
-    mounted() {
-        console.log('just been mounted the global header')
     }
 }

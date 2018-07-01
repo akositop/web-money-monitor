@@ -1,16 +1,12 @@
 <template>
-    <nav class="global-header-wrapper navbar" role="navigation" aria-label="main navigation">
+    <nav class="global-header-wrapper navbar"
+        role="navigation"
+        aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="">
-                <icon name="th" scale="3"></icon>
+                <icon name="th" scale="2" ></icon>
             </a>
-            <span>title</span>
-
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
+            <span>title {{ name }}</span>
         </div>
     </nav>
 </template>
