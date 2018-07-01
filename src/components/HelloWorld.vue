@@ -1,6 +1,7 @@
 <template>
     <div class="hello">
-        <h1>{{ msg }}</h1>
+        <!-- <h1>{{ msg }}</h1> -->
+        <global-header></global-header>
         <section class="section">
               <div class="container">
                   <div class="columns">
@@ -38,16 +39,23 @@
 // import axios from 'axios/dist/axios'
 import moment from 'moment/moment'
 import request from '../services/request/request'
+import globalHeader from './global-header'
 import Vue from 'vue'
+
+// console.log(GlobalHeader)
 
 Vue.use(request)
 
 export default {
     name: 'hello',
-    data () {
+    data() {
         return {
-          msg: 'Welcome to Your starting Vue.js App'
+            msg: 'Welcome to Your starting Vue.js App'
         }
+    },
+
+    components: {
+        globalHeader
     },
 
     created () {
@@ -66,7 +74,7 @@ export default {
       .then(function (data) {
           console.log('fetch data: ', data)
           console.log(moment().format('MM DD, YYYY'))
-       })
+      })
        // axios({
        //    method: 'GET',
        //    url: 'static/tempdocs/userDoc.json',
