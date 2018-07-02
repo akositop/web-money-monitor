@@ -7,7 +7,7 @@ export default {
         return {
             test: 'shit',
             name: 'money monitor',
-            showNav: false
+            showApp: false
         }
     },
 
@@ -16,9 +16,7 @@ export default {
     },
 
     mounted() {
-        setTimeout(() => {
-            this.showNav = true
-        }, 200)
+        this.showApp = true
         console.log('just been mounted the global header')
     }
 }

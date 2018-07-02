@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
     <transition name="fade-slide">
-        <global-header  v-if="showNav"></global-header>
+        <div id="app" v-if="showApp">
+            <global-header></global-header>
+            <transition name="page"  mode="out-in">
+                <router-view />
+            </transition>
+        </div>
     </transition>
-    <transition name="page"  mode="out-in">
-        <router-view />
-    </transition>
-  </div>
 </template>
 
 <script src="./script/app.js">

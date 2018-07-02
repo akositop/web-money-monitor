@@ -14,6 +14,6 @@ export default {
         setTimeout(() => {
             this.menuSpin = false
             console.log('yawa')
-        }, 1100)
+        }, 900)
     }
 }

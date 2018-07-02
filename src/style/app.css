@@ -1,20 +1,29 @@
 /* slide and fading effect */
 .fade-slide-enter-active,
 .fade-slide-leave-active {
-    left: 0%;
-    transition: all 1s;
+    transition: all .8s;
 }
 .fade-slide-enter,
 .fade-slide-leave-to {
-    left: 100%;
+    transform: translateX(100%);
     opacity: 0;
 }
 
 /* page or route transition*/
 .page-enter-active, .page-leave-active {
-  transition: opacity .4s, transform .5s;
+    transition: opacity .3s, transform .3s;
 }
-.page-enter, .page-leave-to {
-  opacity: 0;
-  transform: translateX(-100%);
+.page-enter {
+    opacity: 0;
+    transform: translateX(100%);
+}
+.page-enter-to {
+    opacity: 1;
+}
+.page-leave {
+    opacity: 1;
+}
+.page-leave-to {
+    opacity: 0;
+    transform: translateX(-100%);
 }
