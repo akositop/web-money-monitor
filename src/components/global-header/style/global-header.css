@@ -1,0 +1,11 @@
+.global-header-wrapper {
+    box-shadow: 1px 0px 3px 0px rgba(0, 0 , 0, 0.4);
+}
+.global-header-wrapper .fade-enter-active,
+.global-header-wrapper .fade-leave-active {
+    transition: opacity .5s;
+}
+.global-header-wrapper .fade-enter,
+.global-header-wrapper .fade-leave-to {
+    opacity: 0;
+}
