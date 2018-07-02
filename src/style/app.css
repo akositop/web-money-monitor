@@ -1,10 +1,20 @@
-.fade-enter-active,
-.fade-leave-active {
+/* slide and fading effect */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
     left: 0%;
     transition: all 1s;
 }
-.fade-enter,
-.fade-leave-to {
+.fade-slide-enter,
+.fade-slide-leave-to {
     left: 100%;
     opacity: 0;
+}
+
+/* page or route transition*/
+.page-enter-active, .page-leave-active {
+  transition: opacity .4s, transform .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
 }

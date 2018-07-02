@@ -1,9 +1,11 @@
 <template>
   <div id="app">
-    <transition name="fade">
-        <global-header v-if="showNav"></global-header>
+    <transition name="fade-slide">
+        <global-header  v-if="showNav"></global-header>
     </transition>
-    <router-view/>
+    <transition name="page"  mode="out-in">
+        <router-view />
+    </transition>
   </div>
 </template>
 

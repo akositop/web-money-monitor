@@ -18,7 +18,7 @@ export default {
     mounted() {
         setTimeout(() => {
             this.showNav = true
-        }, 400)
+        }, 200)
         console.log('just been mounted the global header')
     }
 }

@@ -3,9 +3,17 @@ export default {
 
     data() {
         return {
-            test: 'shit',
-            name: 'money monitor',
-            show: false
+            title: 'money monitor',
+            menuSpin: true
         }
+    },
+
+    mounted() {
+        // stopping menu spin
+        // after some time after mounted
+        setTimeout(() => {
+            this.menuSpin = false
+            console.log('yawa')
+        }, 1100)
     }
 }
