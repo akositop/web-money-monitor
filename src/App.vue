@@ -2,7 +2,7 @@
     <transition name="fade-slide">
         <div id="app" v-if="showApp">
             <global-header></global-header>
-            <transition name="page"  mode="out-in">
+            <transition name="page" mode="out-in">
                 <router-view />
             </transition>
         </div>
