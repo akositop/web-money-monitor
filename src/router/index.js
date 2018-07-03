@@ -1,21 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import editVariables from '@/pages/edit-variables'
+import EditVariables from '@/pages/edit-variables'
+import Dashboard from '@/pages/dashboard'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+        path: '/',
+        name: 'Dasboard',
+        component: Dashboard
     },
     {
-      path: '/edit-variables',
-      name: 'editVariables',
-      component: editVariables
+        path: '/hello',
+        name: 'HelloWorld',
+        component: HelloWorld
+    },
+    {
+        path: '/edit-variables',
+        name: 'EditVariables',
+        component: EditVariables
     }
   ]
 })
