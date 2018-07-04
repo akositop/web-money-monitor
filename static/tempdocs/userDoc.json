@@ -1,65 +1,47 @@
 {
-	"id": "",
-	"label": "",
-	"description": "",
-	"base": [
-		{
-			"id": "",
-			"label": "default expenses",
-			"category": "default",
-			"type": "expenses",
-			"value": 0
-		},
-		{
-			"id": "",
-			"label": "default income",
-			"category": "default",
-			"type": "income",
-			"value": 0
-		}
-	],
-	"locals": [
-		{
-			"id": "",
-			"label": "",
-			"description": "",
-			"base": [
-				{
-					"id": "",
-					"label": "default expenses",
-					"category": "default",
-					"type": "expenses",
-					"value": 0
-				},
-				{
-					"id": "",
-					"label": "default income",
-					"category": "default",
-					"type": "income",
-					"value": 0
-				}
-			]
-		},
-		{
-			"id": "",
-			"label": "",
-			"description": "",
-			"base": [
-				{
-					"id": "",
-					"label": "default expenses",
-					"category": "default",
-					"type": "expenses",
-					"value": 0
-				},
-				{
-					"id": "",
-					"label": "default income",
-					"category": "default",
-					"type": "income",
-					"value": 0
-				}
-			]
-		}
-	]
+    "user_id": "user12345",
+    "categories": [
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12345",
+            "loc_id": null,
+            "cat_type": "global",
+            "label": "Food",
+            "desc": "For food consumption"
+        },
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12346",
+            "loc_id": "loc12345",
+            "cat_type": "local",
+            "label": "Drinks",
+            "desc": "For food consumption"
+        },
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12347",
+            "loc_id": "loc12346",
+            "cat_type": "local",
+            "label": "Transportation",
+            "desc": "For transportation consumption"
+        },
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12348",
+            "loc_id": "loc12346",
+            "cat_type": "local",
+            "label": "Shelter",
+            "desc": "For shelter consumption"
+        }
+    ],
+    "base": [
+        {
+            "base_id": "base12345",
+            "label": "Rice",
+            "desc": "",
+            "value": 10,
+            "base_type": ""
+        }
+    ],
+    "variables": []
 }
