@@ -67,7 +67,6 @@ export default {
         localStorage.setItem('origin', 'gilbert nice one');
     },
 
-
     mounted () {
         this.fetch()
        // axios({
@@ -94,9 +93,9 @@ export default {
                 cache: false
              // }, true)
             })
-            .then(data => {
+            .then(resp => {
                 this.loading = false
-                console.log('fetch data: ', data)
+                console.log('fetch resp: ', resp.data)
                 console.log(moment().format('MM DD, YYYY'))
             })
         }
