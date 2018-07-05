@@ -7,7 +7,9 @@
                 <router-link to="/edit-variables">Edit Variables</router-link> | 
                 <router-link to="/">Dashboard</router-link>
             </div>
-            <router-view />
+            <div class="section">
+                <router-view />
+            </div>
         </div>
     </transition>
 </template>

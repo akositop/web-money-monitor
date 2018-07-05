@@ -1,47 +1,145 @@
 {
     "user_id": "user12345",
+    "user_keys": [
+        {
+            "doc_type": "USER_KEY",
+            "key": "1234567890-gebe",
+            "user_id": "user12345"
+        }
+    ],
+    "user_credential": [
+        {
+            "user_id": "user12345",
+            "hash_password": "fdhjliueh-afajncnusafdffsad-fdsafsfads",
+            "username": "mastergebe"
+        }
+    ],
+    "user_information": {
+        "user_id": "user12345",
+        "fname": "gilbert",
+        "mname": "defante",
+        "lname": "cuerbo",
+        "email": "gilbert.cuerbo@gmail.com",
+        "birth": "1995-04-27",
+        "age": "22",
+        "desc": ""
+    },
+    "timer_options": [
+        {
+            "doc_type": "SYSTEM_SETTING",
+            "tim_option_id": "TIME_OPT_1",
+            "label": "Yearly",
+            "desc": ""
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_2",
+            "label": "Monthly",
+            "desc": ""
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_3",
+            "label": "Weekly",
+            "desc": ""
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_4",
+            "label": "Daily",
+            "desc": ""
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_5",
+            "label": "Hourly",
+            "desc": ""
+        }
+    ],
     "categories": [
         {
             "user_id": "user12345",
             "cat_id": "cat12345",
-            "loc_id": null,
-            "cat_type": "global",
             "label": "Food",
             "desc": "For food consumption"
         },
         {
             "user_id": "user12345",
             "cat_id": "cat12346",
-            "loc_id": "loc12345",
-            "cat_type": "local",
             "label": "Drinks",
             "desc": "For food consumption"
         },
         {
             "user_id": "user12345",
             "cat_id": "cat12347",
-            "loc_id": "loc12346",
-            "cat_type": "local",
             "label": "Transportation",
             "desc": "For transportation consumption"
         },
         {
             "user_id": "user12345",
             "cat_id": "cat12348",
-            "loc_id": "loc12346",
-            "cat_type": "local",
             "label": "Shelter",
             "desc": "For shelter consumption"
         }
     ],
     "base": [
         {
+            "user_id": "user12345",
             "base_id": "base12345",
             "label": "Rice",
+            "cat_id": "cat12345",
             "desc": "",
-            "value": 10,
-            "base_type": ""
+            "value": 10
+        },
+        {
+            "user_id": "user12345",
+            "base_id": "base12345",
+            "label": "coke",
+            "cat_id": "cat12346",
+            "desc": "",
+            "value": 10
+        },
+        {
+            "user_id": "user12345",
+            "base_id": "base12346",
+            "label": "Jeep",
+            "cat_id": "cat12347",
+            "desc": "",
+            "value": 10
         }
     ],
-    "variables": []
+    "variables": [
+        {
+            "user_id": "user12345",
+            "variable_id": "var12345",
+            "variable_type": "global",
+            "label": "",
+            "desc": ""
+        },
+        {
+            "user_id": "user12345",
+            "variable_id": "var12346",
+            "variable_type": "local",
+            "label": "",
+            "desc": ""
+        },
+        {
+            "user_id": "user12345",
+            "variable_id": "var12347",
+            "variable_type": "local",
+            "label": "",
+            "desc": ""
+        }
+    ],
+    "timers": [
+        {
+            "user_id": "user12345",
+            "variable_id": "var12346",
+            "base_id": "base12345",
+            "timer_id": "timer12345",
+            "timer_type": "",
+            "label": "",
+            "desc": ""
+        }
+    ]
 }
