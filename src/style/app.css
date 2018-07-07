@@ -59,3 +59,114 @@
 .content {
     margin: 10px;
 }
+
+/* date picker styles */
+.cove-date-body {
+    font-family:
+        BlinkMacSystemFont,
+        -apple-system,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif;
+}
+
+.cov-date-body .cov-date-monthly {
+    background-color: #46a594;
+    font-family:
+        BlinkMacSystemFont,
+        -apple-system,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif;
+}
+
+.cov-date-body .cov-date-caption span {
+    color: #fff;
+    font-family:
+        BlinkMacSystemFont,
+        -apple-system,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif;
+}
+
+.cov-date-body .day {
+    font-family:
+        BlinkMacSystemFont,
+        -apple-system,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif;
+}
+.cov-date-body .day.checked {
+    background-color: #b2dbd4 !important;
+    color: #000 !important;
+    border: 1px solid #386a61;
+}
+
+.cov-date-body .cov-date-box .cov-picker-box .week ul li {
+    color: #1b6d5e;
+    font-family:
+        BlinkMacSystemFont,
+        -apple-system,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif;
+}
+
+.cov-date-body .button-box span {
+    font-family:
+        BlinkMacSystemFont,
+        -apple-system,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        sans-serif;
+}
