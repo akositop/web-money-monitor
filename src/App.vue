@@ -2,9 +2,15 @@
     <transition name="fade-slide">
         <div id="app" v-if="showApp">
             <global-header></global-header>
-            <transition name="page" mode="out-in">
+            <div>
+                <router-link to="/hello">Hello page</router-link> |
+                <router-link to="/edit-variables">Edit Variables</router-link> |
+                <router-link to="/auth/login">login</router-link> |
+                <router-link to="/auth/register">register</router-link>
+            </div>
+            <div class="section">
                 <router-view />
-            </transition>
+            </div>
         </div>
     </transition>
 </template>
