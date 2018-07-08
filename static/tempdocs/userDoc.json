@@ -1,65 +1,156 @@
 {
-	"id": "",
-	"label": "",
-	"description": "",
-	"base": [
-		{
-			"id": "",
-			"label": "default expenses",
-			"category": "default",
-			"type": "expenses",
-			"value": 0
-		},
-		{
-			"id": "",
-			"label": "default income",
-			"category": "default",
-			"type": "income",
-			"value": 0
-		}
-	],
-	"locals": [
-		{
-			"id": "",
-			"label": "",
-			"description": "",
-			"base": [
-				{
-					"id": "",
-					"label": "default expenses",
-					"category": "default",
-					"type": "expenses",
-					"value": 0
-				},
-				{
-					"id": "",
-					"label": "default income",
-					"category": "default",
-					"type": "income",
-					"value": 0
-				}
-			]
-		},
-		{
-			"id": "",
-			"label": "",
-			"description": "",
-			"base": [
-				{
-					"id": "",
-					"label": "default expenses",
-					"category": "default",
-					"type": "expenses",
-					"value": 0
-				},
-				{
-					"id": "",
-					"label": "default income",
-					"category": "default",
-					"type": "income",
-					"value": 0
-				}
-			]
-		}
-	]
+    "user_id": "user12345",
+    "user_keys": [
+        {
+            "doc_type": "USER_KEY",
+            "key": "1234567890-gebe",
+            "user_id": "user12345"
+        }
+    ],
+    "user_credential": [
+        {
+            "user_id": "user12345",
+            "user_type": "COMMON_USER",
+            "hash_password": "fdhjliueh-afajncnusafdffsad-fdsafsfads",
+            "username": "mastergebe"
+        }
+    ],
+    "user_information": {
+        "user_id": "user12345",
+        "fname": "gilbert",
+        "mname": "defante",
+        "lname": "cuerbo",
+        "email": "gilbert.cuerbo@gmail.com",
+        "birth": "1995-04-27",
+        "age": "22",
+        "desc": "Im a developer"
+    },
+    "timer_options": [
+        {
+            "doc_type": "SYSTEM_SETTING",
+            "tim_option_id": "TIME_OPT_1",
+            "label": "Yearly",
+            "desc": "This will script data yearly"
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_2",
+            "label": "Monthly",
+            "desc": "This will script data monthly"
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_3",
+            "label": "Weekly",
+            "desc": "This will script data weekly"
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_4",
+            "label": "Daily",
+            "desc": "This will script data daily"
+        },
+        {
+            "doc_type": "system_settings",
+            "tim_option_id": "TIME_OPT_5",
+            "label": "Hourly",
+            "desc": "This will script data hourly"
+        }
+    ],
+    "categories": [
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12345",
+            "cat_type": "EXPENSES",
+            "label": "Food",
+            "desc": "For food consumption"
+        },
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12346",
+            "cat_type": "EXPENSES",
+            "label": "Drinks",
+            "desc": "For food consumption"
+        },
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12347",
+            "cat_type": "EXPENSES",
+            "label": "Transportation",
+            "desc": "For transportation consumption"
+        },
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12348",
+            "cat_type": "EXPENSES",
+            "label": "Shelter",
+            "desc": "For shelter consumption"
+        },
+        {
+            "user_id": "user12345",
+            "cat_id": "cat12349",
+            "cat_type": "INCOME",
+            "label": "DETAIL",
+            "desc": "Jr Software Developer Salary"
+        }
+    ],
+    "base": [
+        {
+            "user_id": "user12345",
+            "base_id": "base12345",
+            "label": "Rice",
+            "cat_id": "cat12345",
+            "desc": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit amet, ",
+            "value": 10
+        },
+        {
+            "user_id": "user12345",
+            "base_id": "base12345",
+            "label": "coke",
+            "cat_id": "cat12346",
+            "desc": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit amet, ",
+            "value": 10
+        },
+        {
+            "user_id": "user12345",
+            "base_id": "base12346",
+            "label": "Jeep",
+            "cat_id": "cat12347",
+            "desc": "Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,  Lorem ipsum dolor sit amet, ",
+            "value": 10
+        }
+    ],
+    "variables": [
+        {
+            "user_id": "user12345",
+            "variable_id": "var12345",
+            "variable_type": "global",
+            "label": "Global",
+            "desc": "Lorem ipsum dolor sit amet,Stet clita kasd gubergren,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  "
+        },
+        {
+            "user_id": "user12345",
+            "variable_id": "var12346",
+            "variable_type": "local",
+            "label": "Local 1",
+            "desc": "Lorem ipsum dolor sit amet,Stet clita kasd gubergren,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  "
+        },
+        {
+            "user_id": "user12345",
+            "variable_id": "var12347",
+            "variable_type": "local",
+            "label": "Local 2",
+            "desc": "Lorem ipsum dolor sit amet,Stet clita kasd gubergren,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  "
+        }
+    ],
+    "timers": [
+        {
+            "user_id": "user12345",
+            "variable_id": "var12346",
+            "base_id": "base12345",
+            "timer_id": "timer12345",
+            "label": "Add Coke",
+            "desc": "Lorem ipsum dolor sit amet,Stet clita kasd gubergren,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,  no sea takimata sanctus est Lorem ipsum dolor sit amet.  "
+        }
+    ]
 }
