@@ -3,13 +3,6 @@ import DatePicker from 'vue-datepicker/vue-datepicker-es6'
 export default {
     data () {
         return {
-            // for Vue 1.0
-            starttime: '',
-            endtime: '2016-01-19',
-            testTime: '',
-            multiTime: '',
-
-            // for Vue 2.0
             startTime: {
                 time: ''
             },
@@ -19,10 +12,10 @@ export default {
 
             option: {
             type: 'day',
-            week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-            month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            week: 'Mo_Tu_We_Th_Fr_Sa_Su'.split('_'),
+            month: 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
             format: 'YYYY-MM-DD',
-            placeholder: 'when?',
+            placeholder: 'YYYY-MM-DD',
             inputStyle: {
                 'display': 'inline-block',
                 'padding': '6px',
@@ -31,7 +24,9 @@ export default {
                 'border': '2px solid #fff',
                 'box-shadow': '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
                 'border-radius': '2px',
-                'color': '#5F5F5F'
+                'text-align': 'center',
+                'max-width': '150px',
+                'color': 'gray'
             },
             color: {
                 header: '#ccc',
@@ -46,14 +41,14 @@ export default {
             },
             timeoption: {
                 type: 'min',
-                week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-                month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                week: 'Mo_Tu_We_Th_Fr_Sa_Su'.split('_'),
+                month: 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
                 format: 'YYYY-MM-DD HH:mm'
             },
             multiOption: {
                 type: 'multi-day',
-                week: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'],
-                month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                week: 'Mo_Tu_We_Th_Fr_Sa_Su'.split('_'),
+                month: 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
                 format:"YYYY-MM-DD HH:mm"
             },
             limit: [
@@ -69,6 +64,10 @@ export default {
             ]
         }
     },
+
+    mounted() {
+    },
+
     components: {
         DatePicker
     }

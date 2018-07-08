@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import EditVariables from '@/pages/edit-variables'
 import Dashboard from '@/pages/dashboard'
 import Auth from '@/pages/auth'
+import {verify} from './script/route-gaurd'
 
 Vue.use(Router)
 
@@ -25,7 +26,7 @@ export default new Router({
         component: EditVariables
     },
     {
-        path: '/auth',
+        path: '/auth/:action',
         name: 'Auth',
         component: Auth
     }

@@ -88,11 +88,11 @@ export default {
             this.loading = true
             this.$request({
                 method: 'GET',
-                // url: 'http://localhost:3000',
-                url: '',
+                url: 'http://localhost:3000/',
+                contentType: 'application/json',
                 cache: false
-             // }, true)
-            })
+             }, true)
+            // })
             .then(resp => {
                 this.loading = false
                 console.log('fetch resp: ', resp.data)
