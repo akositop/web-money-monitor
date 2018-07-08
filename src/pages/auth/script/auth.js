@@ -1,4 +1,6 @@
 import DatePicker from 'vue-datepicker/vue-datepicker-es6'
+import UserCredential from '@/components/user-credential'
+import UserInfo from '@/components/user-info'
 
 export default {
     data () {
@@ -69,6 +71,8 @@ export default {
     },
 
     components: {
-        DatePicker
+        DatePicker,
+        UserCredential,
+        UserInfo
     }
 }
