@@ -13,16 +13,11 @@
                 <transition name="page">
                     <div class="auth-register auth-sub-page section"
                         v-if="$route.params.action === 'register'">
-                        <h1>auth register</h1>
                          <user-info></user-info>
-                        <div class="row">
-                            <span>Birthday：</span>
-                            <date-picker
-                                :date="startTime"
-                                :option="option"
-                                :limit="limit">
-                            </date-picker>
-                        </div>
+                         <section class="section">
+                             <user-credential></user-credential>
+                         </section>
+                        <button class="button is-rounded is-fullwidth">Register</button>
                     </div>
                 </transition>
             </div>

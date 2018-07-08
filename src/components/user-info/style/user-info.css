@@ -1,3 +1,6 @@
 .user-info-wrapper {
-
+    padding-top: 0px;
+}
+.user-info-wrapper .input-label {
+    text-align: right;
 }
