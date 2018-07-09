@@ -1,8 +1,8 @@
 <template>
     <div class="user-info-wrapper">
-        <section class="section">
+        <section class="section" v-if="infoStep == 0">
             <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         First Name
                     </div>
@@ -12,7 +12,7 @@
                 </div>
             </div>
             <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         Middle Name
                     </div>
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         Last Name
                     </div>
@@ -32,9 +32,9 @@
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="section" v-if="infoStep == 1">
             <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         Email
                     </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
              <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         Birthday
                     </div>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         Gender
                     </div>
@@ -71,9 +71,9 @@
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="section" v-if="infoStep == 2">
             <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         Self Description
                     </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
             <div class="">
-                <div class="columns is-mobile">
+                <div class="columns">
                     <div class="column input-label is-two-fifths">
                         Job Description
                     </div>
@@ -93,6 +93,8 @@
                 </div>
             </div>
         </section>
+        <button class="button" @click="step(false)">back</button>
+        <button class="button" @click="step(true)">next</button>
     </div>
 </template>
 
