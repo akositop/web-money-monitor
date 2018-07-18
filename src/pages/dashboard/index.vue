@@ -11,6 +11,9 @@
                             400,000 packages pre-installed, including validator.
                             Try it out:
                         </div>
+                        <div>
+                            <img src="static/files/father.jpg" alt="Bonifacio" />
+                        </div>
                     </div>
                 </div>
                 <div class="column">
