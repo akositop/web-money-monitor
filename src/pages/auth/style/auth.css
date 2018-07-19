@@ -12,21 +12,19 @@
     background: #fff;
     display: block;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-bottom: 100%;
     box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .auth-wrapper .auth-sub-page.auth-login {
      text-align: center;
-     width: 450px;
+     width: 400px;
 }
 
 .auth-wrapper .auth-sub-page.auth-register {
      text-align: center;
      width: 500px;
-     max-height: 600px;
-     overflow-y: scroll;
 }
 
 .auth-wrapper .auth-content .section {
