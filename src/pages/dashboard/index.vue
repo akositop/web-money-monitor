@@ -11,6 +11,9 @@
                             400,000 packages pre-installed, including validator.
                             Try it out:
                         </div>
+                        <div>
+                            <img src="static/files/father.png" alt="Bonifacio" />
+                        </div>
                     </div>
                 </div>
                 <div class="column">
@@ -21,6 +24,10 @@
                             Node.js environment and already has all of npm’s
                             400,000 packages pre-installed, including validator.
                             Try it out:
+                        </div>
+                         <div>
+                            <input type="file" id="uploader" name="userPhoto" />
+                            <input type="button" value="submit" @click="upload()" />
                         </div>
                     </div>
                 </div>

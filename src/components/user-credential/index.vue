@@ -1,7 +1,7 @@
 <template>
     <div class="user-credential-wrapper section">
         <div class="">
-            <div class="columns is-mobile">
+            <div class="columns">
                 <div class="column input-label is-two-fifths">
                     Username
                 </div>
@@ -11,7 +11,7 @@
             </div>
         </div>
         <div class="">
-            <div class="columns is-mobile">
+            <div class="columns">
                 <div class="column input-label is-two-fifths">
                     Password
                 </div>
@@ -21,9 +21,9 @@
             </div>
         </div>
         <div class="">
-            <div class="columns is-mobile">
+            <div class="columns">
                 <div class="column input-label is-two-fifths">
-                    Retype-Password
+                    Retype Password
                 </div>
                 <div class="column">
                     <input type="password" class="input" />

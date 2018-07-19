@@ -56,7 +56,8 @@ export default {
                     from: '2017-01-01',
                     to: '2018-07-20'
                 }
-            ]
+            ],
+            infoStep: 0
         }
     },
 
@@ -65,5 +66,21 @@ export default {
 
     components: {
         DatePicker
+    },
+
+    methods: {
+        step(dir) {
+            if (dir) {
+                if (this.infoStep <= 2) {
+                    this.infoStep++
+                } else {
+                    this.$emit('onDone', {})
+                }
+            } else {
+                if (this.infoStep > 0) {
+                    this.infoStep--
+                }
+            }
+        }
     }
 }
