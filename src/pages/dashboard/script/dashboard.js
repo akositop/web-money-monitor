@@ -1,13 +1,14 @@
 export default {
     data() {
         return {
-
+            images: []
         }
     },
 
     props: [],
 
-    components: {},
+    components: {
+    },
 
     mixins: [],
 
@@ -48,6 +49,17 @@ export default {
             })
         },
 
+        handleFileData(data) {
+
+            for (let i = 0; i < data.fileData.files.length; i++) {
+                let file = data.fileData.files[i]
+
+                if (file.isSuccess) {
+                    this.images.push(`${ this.remoteUrl }files/${ file.name }`)
+                }
+            }
+        },
+
         upload() {
             console.log('uploading...')
             this.loading = true
@@ -71,6 +83,8 @@ export default {
             .then(resp => {
                 this.loading = false
                 console.log('error uploading')
+                console.log('response: ', resp)
+                this.handleFileData(resp.data)
             })
             .catch(err => {
                 this.loading = false

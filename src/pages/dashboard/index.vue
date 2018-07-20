@@ -31,7 +31,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="column">
+                    <div class="content">
+                        <div v-for="image in images">
+                            <img :src="image" :alt="image" />
+                        </div>
+                    </div>
+                </div>
             </div>
+            <loading-indicator v-if="loading"></loading-indicator>
         </div>
     </transition>
 </template>
@@ -40,5 +48,5 @@
 </script>
 
 <style>
-  @import "style/dashboard.css"
+    @import "style/dashboard.css"
 </style>
