@@ -63,7 +63,7 @@ export default {
         upload() {
             console.log('uploading...')
             this.loading = true
-            
+
             let formData = new FormData(),
                 formEl = document.getElementById('uploader')
 
@@ -75,11 +75,11 @@ export default {
 
             this.$request({
                 method: 'POST',
-                url: 'file',
+                url: 'http://localhost:3000/file/',
                 contentType: 'multipart/form-data',
                 data: formData,
                 cache: false
-            })
+            }, true)
             .then(resp => {
                 this.loading = false
                 console.log('error uploading')
