@@ -39,7 +39,6 @@ export default {
             })
             .then(resp => {
                 this.loading = false
-                console.log('local fetch resp: ', resp.data)
                 this.setImages(resp.data)
             })
             .catch(err => {
@@ -64,14 +63,17 @@ export default {
 
                     // loop throu image urls 
                     for (var j = 0; j < images.length; j++) {
-                        this.images.push(this.remoteUrl + images[j].url)
+                        this.images.push({
+                            urlPath: this.remoteUrl + images[j].url,
+                            data: images[j],
+                            docId: imagesRows[i].id
+                        })
                     }
                 }
             }
         },
 
         upload() {
-            console.log('uploading...')
             this.loading = true
 
             let formData = new FormData(),
@@ -87,7 +89,7 @@ export default {
 
             this.$request({
                 method: 'POST',
-                url: 'http://localhost:3000/file/',
+                url: 'file/',
                 contentType: 'multipart/form-data',
                 data: formData,
                 cache: false,
@@ -100,6 +102,26 @@ export default {
             .then(resp => {
                 this.fetchImages()
                 console.log('success uploading file')
+            })
+            .catch(err => {
+                this.loading = false
+                console.log(err)
+            })
+        },
+
+        deleteImage(imageData) {
+            console.log(imageData)
+            this.loading = true
+            this.$request({
+                method: 'POST',
+                url: 'delete-file/',
+                contentType: 'application/json',
+                data: imageData,
+                cache: false
+            })
+            .then(resp => {
+                this.fetchImages()
+                console.log('delete success')
             })
             .catch(err => {
                 this.loading = false

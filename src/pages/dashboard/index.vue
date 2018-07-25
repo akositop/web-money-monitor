@@ -34,8 +34,13 @@
                             <h3>upload progress</h3>
                             <h4>{{ uploadProgress }}</h4>
                         </div>
-                        <div v-for="image in images">
-                            <img :src="image" :alt="image" />
+                        <div v-for="image in images" style="position: relative;">
+                            <img :src="image.urlPath" :alt="image.urlPath" />
+                            <button class="button"
+                                style="position: absolute; top: 0px; margin: 5px;"
+                                @click="deleteImage(image)">
+                                <icon name="trash"></icon>
+                            </button>
                         </div>
                     </div>
                 </div>
