@@ -12,7 +12,7 @@
                             Try it out:
                         </div>
                         <div>
-                            <img src="static/files/father.png" alt="Bonifacio" />
+                            <img :src="fatherPhoto" alt="Bonifacio" />
                         </div>
                     </div>
                 </div>
@@ -30,6 +30,10 @@
                 </div>
                 <div class="column">
                     <div class="content">
+                        <div>
+                            <h3>upload progress</h3>
+                            <h4>{{ uploadProgress }}</h4>
+                        </div>
                         <div v-for="image in images">
                             <img :src="image" :alt="image" />
                         </div>

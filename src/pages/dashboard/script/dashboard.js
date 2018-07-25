@@ -1,35 +1,16 @@
 export default {
     data() {
         return {
-            images: []
+            images: [],
+            uploadProgress: 0,
+            fatherPhoto: ''
         }
     },
 
-    props: [],
-
-    components: {
-    },
-
-    mixins: [],
-
-    created() {
-
-    },
-
     mounted() {
-        this.fetchLocal()
-    },
-
-    destroyed() {
-
-    },
-
-    watch: {
-
-    },
-
-    computed : {
-
+        this.fatherPhoto = this.remoteUrl + 'files/father.png'
+        this.fetchImages()
+        // this.fetchLocal()
     },
 
     methods: {
@@ -49,13 +30,42 @@ export default {
             })
         },
 
-        handleFileData(data) {
+        fetchImages() {
+            this.loading = true
+            this.$request({
+                method: 'GET',
+                url: 'test-images',
+                cache: false
+            })
+            .then(resp => {
+                this.loading = false
+                console.log('local fetch resp: ', resp.data)
+                this.setImages(resp.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        },
 
-            for (let i = 0; i < data.fileData.files.length; i++) {
-                let file = data.fileData.files[i]
+        setImages(data) {
+            // check images data
+            if (
+                data &&
+                data.doc &&
+                data.doc.rows &&
+                data.doc.rows.length
+            ) {
+                this.images = []
+                // loop through images of data
+                var imagesRows = data.doc.rows
 
-                if (file.isSuccess) {
-                    this.images.push(`${ this.remoteUrl }files/${ file.name }`)
+                for (var i = 0; i < imagesRows.length; i++) {
+                    var images = imagesRows[i].value
+
+                    // loop throu image urls 
+                    for (var j = 0; j < images.length; j++) {
+                        this.images.push(this.remoteUrl + images[j].url)
+                    }
                 }
             }
         },
@@ -73,18 +83,23 @@ export default {
                 }
             }
 
+            this.uploadProgress = 0
+
             this.$request({
                 method: 'POST',
                 url: 'http://localhost:3000/file/',
                 contentType: 'multipart/form-data',
                 data: formData,
-                cache: false
-            }, true)
+                cache: false,
+                // config: {
+                //     progress: data => {
+                //         this.uploadProgress = data.loaded
+                //     }
+                // }
+            })
             .then(resp => {
-                this.loading = false
-                console.log('error uploading')
-                console.log('response: ', resp)
-                this.handleFileData(resp.data)
+                this.fetchImages()
+                console.log('success uploading file')
             })
             .catch(err => {
                 this.loading = false
