@@ -4,7 +4,7 @@ export default {
     data() {
         return {
             loading: false,
-            remoteUrl: 'http://139.59.255.28/static/'
+            remoteUrl: 'http://173.82.94.129/static/'
         }
     },
 
