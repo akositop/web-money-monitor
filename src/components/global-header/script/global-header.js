@@ -13,7 +13,6 @@ export default {
         // after some time after mounted
         setTimeout(() => {
             this.menuSpin = false
-            console.log('yawa')
         }, 900)
     }
 }

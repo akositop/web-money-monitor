@@ -7,9 +7,11 @@ import router from './router'
 // importing font awesome
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+import GlobalComponets from '@/components/global-components'
  
 // globally (in your main .js file)
 Vue.component('icon', Icon)
+Vue.mixin(GlobalComponets)
 
 Vue.config.productionTip = false
 
