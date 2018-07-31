@@ -1,34 +1,16 @@
 export default {
     data() {
         return {
-
+            images: [],
+            uploadProgress: 0,
+            fatherPhoto: ''
         }
     },
 
-    props: [],
-
-    components: {},
-
-    mixins: [],
-
-    created() {
-
-    },
-
     mounted() {
-        this.fetchLocal()
-    },
-
-    destroyed() {
-
-    },
-
-    watch: {
-
-    },
-
-    computed : {
-
+        this.fatherPhoto = this.remoteUrl + 'files/father.png'
+        this.fetchImages()
+        // this.fetchLocal()
     },
 
     methods: {
@@ -48,10 +30,52 @@ export default {
             })
         },
 
-        upload() {
-            console.log('uploading...')
+        fetchImages() {
             this.loading = true
-            
+            this.$request({
+                method: 'GET',
+                url: 'test-images',
+                cache: false
+            })
+            .then(resp => {
+                this.loading = false
+                this.setImages(resp.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+        },
+
+        setImages(data) {
+            // check images data
+            if (
+                data &&
+                data.doc &&
+                data.doc.rows &&
+                data.doc.rows.length
+            ) {
+                this.images = []
+                // loop through images of data
+                var imagesRows = data.doc.rows
+
+                for (var i = 0; i < imagesRows.length; i++) {
+                    var images = imagesRows[i].value
+
+                    // loop throu image urls 
+                    for (var j = 0; j < images.length; j++) {
+                        this.images.push({
+                            urlPath: this.remoteUrl + images[j].url,
+                            data: images[j],
+                            docId: imagesRows[i].id
+                        })
+                    }
+                }
+            }
+        },
+
+        upload() {
+            this.loading = true
+
             let formData = new FormData(),
                 formEl = document.getElementById('uploader')
 
@@ -61,16 +85,43 @@ export default {
                 }
             }
 
+            this.uploadProgress = 0
+
             this.$request({
                 method: 'POST',
-                url: 'file',
+                url: 'file/',
                 contentType: 'multipart/form-data',
                 data: formData,
+                cache: false,
+                // config: {
+                //     progress: data => {
+                //         this.uploadProgress = data.loaded
+                //     }
+                // }
+            })
+            .then(resp => {
+                this.fetchImages()
+                console.log('success uploading file')
+            })
+            .catch(err => {
+                this.loading = false
+                console.log(err)
+            })
+        },
+
+        deleteImage(imageData) {
+            console.log(imageData)
+            this.loading = true
+            this.$request({
+                method: 'POST',
+                url: 'delete-file/',
+                contentType: 'application/json',
+                data: imageData,
                 cache: false
             })
             .then(resp => {
-                this.loading = false
-                console.log('error uploading')
+                this.fetchImages()
+                console.log('delete success')
             })
             .catch(err => {
                 this.loading = false
