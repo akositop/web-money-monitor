@@ -4,7 +4,7 @@ export default {
     data() {
         return {
             loading: false,
-            remoteUrl: 'http://173.82.94.129/static/'
+            remoteUrl: 'http://www.mastergebe.com/static/'
         }
     },
 
